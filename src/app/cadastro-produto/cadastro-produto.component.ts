@@ -42,7 +42,7 @@ export class CadastroProdutoComponent implements OnInit {
   exclui(){
     this.computadores.pop();
     localStorage.setItem('computadores', JSON.stringify(this.computadores));
-    console.log(this.computadores)
+    console.log(this.computadores);
   }
   limpaCampo(){
     this.marca = ''; 

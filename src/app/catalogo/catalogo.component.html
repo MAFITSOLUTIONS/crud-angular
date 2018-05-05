@@ -5,11 +5,14 @@
     <ul>
       <li *ngFor="let pc of recebeComputador">
         <div class="card">
-          <p>{{pc.marca}}</p>
+          <h3>{{pc.marca}}</h3>
           <img src="{{ pc.foto }}">
-          <p><a routerLink="/detalhes">Ver Detalhes</a></p>
+          <p><a routerLink="/detalhes">+Detalhes</a></p>
         </div>
       </li>
     </ul>
+  </div>
+  <div id="popup">
+    <button (click)="fechaPop()">Fechar</button>
   </div>
 </section>

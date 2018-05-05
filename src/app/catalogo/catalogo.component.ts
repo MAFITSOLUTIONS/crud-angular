@@ -15,5 +15,7 @@ export class CatalogoComponent implements OnInit {
     if (localStorage.getItem('computadores')) this.recebeComputador = JSON.parse(localStorage.getItem('computadores'));
     console.log('Filho', this.recebeComputador);
   }
-
+  fechaPop(){
+    document.getElementById('popup').style.display = 'none';
+  }
 }

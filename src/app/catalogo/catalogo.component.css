@@ -1,5 +1,5 @@
 section {
-    text-align: center; 
+    text-align: center;
 }
 .card-container ul {
     display: flex;
@@ -7,7 +7,6 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    border: 2px solid green;
 }
 .card{
     border: 1px solid red;
@@ -17,4 +16,12 @@ section {
 }
 .card img {
     width: 150px;
+}
+#popup {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(241, 5, 5, 0.6);
 }
