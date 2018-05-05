@@ -3,16 +3,17 @@
 
   <div class="card-container">
     <ul>
-      <li *ngFor="let pc of recebeComputador">
-        <div (click)="detalhes()" class="cardPP">
+      <li *ngFor="let pc of recebeComputador; let i = index">
+        <div (click)="detalhes(i)" class="cardPP">
+          {{ i }}
           <h3>{{pc.marca}}</h3>
           <img src="{{ pc.foto }}">
           <p><a routerLink="/detalhes">+Detalhes</a></p>
         </div>
+        <div id="popup">
+          <button (click)="fechaPop()"></button>
+        </div>
       </li>
     </ul>
-  </div>
-  <div id="popup">
-    <button (click)="fechaPop()">Fechar</button>
   </div>
 </section>
