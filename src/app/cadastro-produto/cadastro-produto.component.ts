@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro-produto.component.css']
 })
 export class CadastroProdutoComponent implements OnInit {
-  
-    nome = '';
+
     marca = '';
     modelo = '';
     mobo = '';
@@ -28,7 +27,6 @@ export class CadastroProdutoComponent implements OnInit {
     console.log('Funcão cadastra')
     console.log(this.computadores)
     this.computadores.push({
-      nome: this.nome,
       marca: this.marca,
       modelo: this.modelo,
       mobo: this.mobo,
@@ -47,7 +45,6 @@ export class CadastroProdutoComponent implements OnInit {
     console.log(this.computadores)
   }
   limpaCampo(){
-    this.nome = '';
     this.marca = ''; 
     this.modelo = '';
     this.mobo = '';

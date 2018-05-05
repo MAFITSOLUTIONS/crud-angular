@@ -1,9 +1,13 @@
+section {
+    text-align: center; 
+}
 .card-container ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
-    border: 1px solid red
+    border: 2px solid green;
 }
 .card{
     border: 1px solid red;
