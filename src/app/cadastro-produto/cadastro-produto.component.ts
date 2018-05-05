@@ -15,7 +15,7 @@ export class CadastroProdutoComponent implements OnInit {
     hdMarca = '';
     hdTamanho = '';
     cpu = '';
-    foto = '';
+    foto = 'https://akphoto1.ask.fm/522/362/151/1280003005-1pt9pek-flkshpqh97lko95/original/MeuPrimeiroLaptopXuxa.jpg';
     computadores = [];
 
   constructor() { }
@@ -35,10 +35,16 @@ export class CadastroProdutoComponent implements OnInit {
       ram: this.ram,
       hdMarca: this.hdMarca,
       hdTamanho: this.hdTamanho,
-      cpu: this.cpu
+      cpu: this.cpu,
+      foto: this.foto
     });
     localStorage.setItem('computadores', JSON.stringify(this.computadores));
     this.limpaCampo();
+  }
+  exclui(){
+    this.computadores.pop();
+    localStorage.setItem('computadores', JSON.stringify(this.computadores));
+    console.log(this.computadores)
   }
   limpaCampo(){
     this.nome = '';

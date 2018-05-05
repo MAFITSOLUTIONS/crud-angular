@@ -1,0 +1,14 @@
+.card-container ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.card img {
+    width: 150px;
+}

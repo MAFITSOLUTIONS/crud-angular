@@ -1,6 +1,13 @@
-<h2>Catalogo de Computadores</h2>
-<ul>
-  <li *ngFor="let pc of computadores">
-    {{ computadores.nome }}
-  </li>
-</ul>
+<h1>Lista de PCs - Catalogo</h1>
+
+<div class="card-container">
+  <ul>
+    <li *ngFor="let c of recebeComputador">
+      <div class="card">
+        <img src="{{ c.foto }}">
+        {{c.nome}}
+        <p><a routerLink="/detalhes">Ver Detalhes</a></p>
+      </div>
+    </li>
+  </ul>
+</div>

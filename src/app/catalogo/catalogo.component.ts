@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-import { CadastroProdutoComponent } from './../cadastro-produto/cadastro-produto.component';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-catalogo',
@@ -9,9 +7,16 @@ import { CadastroProdutoComponent } from './../cadastro-produto/cadastro-produto
 })
 export class CatalogoComponent implements OnInit {
 
+  @Input() recebeComputador;
+
+  computadores = [];
+
   constructor() { }
 
   ngOnInit() {
+    console.log('Filho', this.recebeComputador)
+    if (localStorage.getItem('computadores')) this.recebeComputador = JSON.parse(localStorage.getItem('computadores'))
+
   }
 
 }
