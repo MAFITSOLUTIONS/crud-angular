@@ -1,17 +1,17 @@
 section {
-    border: 2px solid blue;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 li {
     border: 1px solid #f2516b;
+    margin-bottom: 15px;
     padding: 10px 100px;
-    margin: 20px 0;
+    color: #d10022;
+    font-size: 30px;
+    cursor: pointer;
 }
 li:hover {
+    color: #fff;
     background: #f2516b;
-}
-li a {
-    font-size: 30px;
 }

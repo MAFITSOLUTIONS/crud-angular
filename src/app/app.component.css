@@ -1,8 +1,8 @@
 header {
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 header img {
     width: 300px;
