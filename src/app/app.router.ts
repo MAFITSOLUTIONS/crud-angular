@@ -1,4 +1,5 @@
-import { Routes } from '@angular/router';
+import { ModuleWithProviders } from '@angular/core'
+import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
@@ -11,3 +12,5 @@ const ROTAS: Routes = [
     { path: 'detalhes', component: DetalhesComponent },
     { path: 'cadastro-produto', component: CadastroProdutoComponent }
 ];
+
+export const routing: ModuleWithProviders = RouterModule.forRoot(ROTAS);

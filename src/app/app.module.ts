@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { DetalhesComponent } from './detalhes/detalhes.component';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
+import { routing } from './app.router';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.co
     CadastroProdutoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
