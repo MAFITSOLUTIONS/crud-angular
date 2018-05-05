@@ -8,17 +8,17 @@ section {
     justify-content: center;
     width: 100%;
 }
-.card{
+.cardPP{
     border: 1px solid red;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
-.card img {
+.cardPP img {
     width: 150px;
 }
 #popup {
-    display: block;
+    display: none;
     position: absolute;
     top: 0;
     width: 100%;

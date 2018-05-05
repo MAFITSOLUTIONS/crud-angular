@@ -13,9 +13,11 @@ export class CatalogoComponent implements OnInit {
 
   ngOnInit() {
     if (localStorage.getItem('computadores')) this.recebeComputador = JSON.parse(localStorage.getItem('computadores'));
-    console.log('Filho', this.recebeComputador);
   }
   fechaPop(){
     document.getElementById('popup').style.display = 'none';
+  }
+  detalhes(){
+    document.getElementById('popup').style.display = 'block';
   }
 }

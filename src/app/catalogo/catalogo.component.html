@@ -1,10 +1,10 @@
 <section>
-  <h1>Lista de PCs - Catalogo</h1>
+  <h1>Catálogo de Computadores</h1>
 
   <div class="card-container">
     <ul>
       <li *ngFor="let pc of recebeComputador">
-        <div class="card">
+        <div (click)="detalhes()" class="cardPP">
           <h3>{{pc.marca}}</h3>
           <img src="{{ pc.foto }}">
           <p><a routerLink="/detalhes">+Detalhes</a></p>
