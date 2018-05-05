@@ -7,16 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CatalogoComponent implements OnInit {
 
-  @Input() recebeComputador;
-
-  computadores = [];
+  recebeComputador = [];
 
   constructor() { }
 
   ngOnInit() {
-    console.log('Filho', this.recebeComputador)
-    if (localStorage.getItem('computadores')) this.recebeComputador = JSON.parse(localStorage.getItem('computadores'))
-
+    if (localStorage.getItem('computadores')) this.recebeComputador = JSON.parse(localStorage.getItem('computadores'));
+    console.log('Filho', this.recebeComputador);
   }
 
 }
