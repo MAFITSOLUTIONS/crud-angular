@@ -1,3 +1,12 @@
-<p>
-  cadastro-produto works!
-</p>
+<h2>Cadastrar Novo Computador</h2>
+
+<input [(ngModel)]="nome" type="text" placeholder="Nome...">
+<input [(ngModel)]="marca" type="text" placeholder="Marca...">
+<input [(ngModel)]="modelo" type="text" placeholder="Modelo...">
+<input [(ngModel)]="mobo" type="text" placeholder="Placa-mãe...">
+<input [(ngModel)]="ram" type="text" placeholder="Memória RAM...">
+<input [(ngModel)]="hdTamanho" type="text" placeholder="Capacidade HD...">
+<input [(ngModel)]="hdMarca" type="text" placeholder="Marca HD...">
+<input [(ngModel)]="cpu" type="text" placeholder="Processador...">
+<input type="text" placeholder="Foto...">
+<button (click)="cadastra()">Cadastrar</button>

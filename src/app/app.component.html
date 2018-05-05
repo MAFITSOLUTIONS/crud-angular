@@ -1,11 +1,13 @@
-<nav>
+<header>
   <h1><a routerLink="">Logo</a></h1>
-  <ul>
-    <li><a routerLink="/catalogo">Catálogo</a></li>
-    <li><a routerLink="/detalhes">Detalhes</a></li>
-    <li><a routerLink="/cadastro-produto">Cadastrar Produto</a></li>
-  </ul>
-</nav>
-<router-outlet></router-outlet>
-
-
+</header>
+<section>
+  <nav>
+    <ul id="menu">
+      <li routerLinkActive="ativado"><a routerLink="/catalogo">Catálogo</a></li>
+      <li routerLinkActive="ativado"><a routerLink="/detalhes">Detalhes</a></li>
+      <li routerLinkActive="ativado"><a routerLink="/cadastro-produto">Cadastrar Produto</a></li>
+    </ul>
+  </nav>
+    <router-outlet></router-outlet>
+</section>
