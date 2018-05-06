@@ -8,11 +8,23 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CatalogoComponent implements OnInit {
   key: number = 0;
   recebeComputador = [];
+  arrayFiltro = [];
+  busca: string;
 
   constructor() { }
 
   ngOnInit() {
+    //this.recebeComputador = this.arrayFiltro;
     if (localStorage.getItem('computadores')) this.recebeComputador = JSON.parse(localStorage.getItem('computadores'));
+  }
+  filtra(){
+    this.recebeComputador = JSON.parse(localStorage.getItem('computadores'));
+    console.log(this.busca);
+    this.arrayFiltro = this.recebeComputador.filter((obj) => {
+      return obj.marca.toLowerCase() === this.busca;
+    });
+    console.log(this.arrayFiltro)
+    this.recebeComputador = this.arrayFiltro;
   }
   exclui(index){
     this.recebeComputador.splice(index, 1);

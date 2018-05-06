@@ -19,20 +19,20 @@ section {
     width: 150px;
 }
 #popup {
-    display: block;
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(241, 5, 5, 0.9);
+    background: rgba(0, 0, 0, 0.336);
 }
 .cardGG {
-    margin: auto;
-    margin-top: 20px;
+    margin: 40px auto;
     width: 50%;
-    border: 2px solid yellow;
+    border: 2px solid #444;
+    background: #999;
 }
 .cardGG img {
     width: 100%;
@@ -42,6 +42,31 @@ section {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 20px;
+    margin: 25px;
     font-size: 40px;
+}
+.fechar:hover {
+    transform: scale(1.3,1.3)
+}
+.editar, .deletar {
+    padding: 5px 20px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    background: #999;
+}
+.editar {
+    background: #00b;
+}
+.deletar {
+    background: #f00;
+}
+.card-detalhes {
+    display: flex;
+}
+.card-detalhes span {
+    color: #d10022;
+}
+.card-detalhes h4 {
+    margin: 5px;
 }
