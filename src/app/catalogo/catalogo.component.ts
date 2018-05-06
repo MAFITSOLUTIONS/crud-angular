@@ -12,12 +12,10 @@ export class CatalogoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(localStorage);
     if (localStorage.getItem('computadores')) this.recebeComputador = JSON.parse(localStorage.getItem('computadores'));
   }
   exclui(index){
     this.recebeComputador.splice(index, 1);
-    console.log(localStorage);
     localStorage.setItem('computadores', JSON.stringify(this.recebeComputador));
     document.getElementById('popup').style.display = 'none';
   }

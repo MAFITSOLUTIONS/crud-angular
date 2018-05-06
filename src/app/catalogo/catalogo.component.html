@@ -1,5 +1,7 @@
 <section>
   <h1>Catálogo de Computadores</h1>
+  
+  <h2 *ngIf="recebeComputador.length < 1">Não há computadores cadastrados!</h2>
 
   <div class="card-container">
     <ul>
@@ -10,13 +12,20 @@
           <p><a  (click)="detalhes(i)">+Detalhes</a></p>
         </div>
       </li>
-      <div id="popup" *ngIf="recebeComputador.length >= 0">
-          <img src="{{ recebeComputador[this.key].foto }}" alt="">
-          {{recebeComputador[this.key].modelo}}
-          {{recebeComputador[this.key].marca}}
-          <button (click)="fechaPop()">Fechar</button>
-          <button (click)="exclui(key)" key="key">Deletar</button>
-        </div>
     </ul>
+  </div>
+  <div id="popup" *ngIf="recebeComputador.length > 0">
+    <div class="cardGG">
+        <img src="{{ recebeComputador[this.key].foto }}" alt="">
+        <h4>{{recebeComputador[this.key].marca}}</h4>
+        <h4>{{recebeComputador[this.key].modelo}}</h4>
+        <h4>{{recebeComputador[this.key].mobo}}</h4>
+        <h4>{{recebeComputador[this.key].cpu}}</h4>
+        <h4>{{recebeComputador[this.key].ram}}</h4>
+        <h4>{{recebeComputador[this.key].hdTamanho}}</h4>
+        <h4>{{recebeComputador[this.key].HdMarca}}</h4>
+    </div>
+    <span class="fechar" (click)="fechaPop()">X</span>
+    <button (click)="exclui(key)" key="key">Deletar</button>
   </div>
 </section>
