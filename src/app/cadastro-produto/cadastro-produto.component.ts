@@ -20,12 +20,10 @@ export class CadastroProdutoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    if (localStorage.getItem('computadores')) this.computadores = JSON.parse(localStorage.getItem('computadores'))
+    if (localStorage.getItem('computadores')) this.computadores = JSON.parse(localStorage.getItem('computadores'));
   }
   
   cadastra(){
-    console.log('Funcão cadastra')
-    console.log(this.computadores)
     this.computadores.push({
       marca: this.marca,
       modelo: this.modelo,
@@ -37,12 +35,8 @@ export class CadastroProdutoComponent implements OnInit {
       foto: this.foto
     });
     localStorage.setItem('computadores', JSON.stringify(this.computadores));
+    console.log(localStorage);
     this.limpaCampo();
-  }
-  exclui(){
-    this.computadores.pop();
-    localStorage.setItem('computadores', JSON.stringify(this.computadores));
-    console.log(this.computadores);
   }
   limpaCampo(){
     this.marca = ''; 

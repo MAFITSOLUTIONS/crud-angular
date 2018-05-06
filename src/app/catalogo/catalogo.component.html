@@ -5,15 +5,18 @@
     <ul>
       <li *ngFor="let pc of recebeComputador; let i = index">
         <div (click)="detalhes(i)" class="cardPP">
-          {{ i }}
           <h3>{{pc.marca}}</h3>
           <img src="{{ pc.foto }}">
-          <p><a routerLink="/detalhes">+Detalhes</a></p>
-        </div>
-        <div id="popup">
-          <button (click)="fechaPop()"></button>
+          <p><a  (click)="detalhes(i)">+Detalhes</a></p>
         </div>
       </li>
+      <div id="popup" *ngIf="recebeComputador.length >= 0">
+          <img src="{{ recebeComputador[this.key].foto }}" alt="">
+          {{recebeComputador[this.key].modelo}}
+          {{recebeComputador[this.key].marca}}
+          <button (click)="fechaPop()">Fechar</button>
+          <button (click)="exclui(key)" key="key">Deletar</button>
+        </div>
     </ul>
   </div>
 </section>

@@ -6,20 +6,26 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./catalogo.component.css']
 })
 export class CatalogoComponent implements OnInit {
-
+  key: number = 0;
   recebeComputador = [];
 
   constructor() { }
 
   ngOnInit() {
+    console.log(localStorage);
     if (localStorage.getItem('computadores')) this.recebeComputador = JSON.parse(localStorage.getItem('computadores'));
-    
   }
-  fechaPop(){
+  exclui(index){
+    this.recebeComputador.splice(index, 1);
+    console.log(localStorage);
+    localStorage.setItem('computadores', JSON.stringify(this.recebeComputador));
+    document.getElementById('popup').style.display = 'none';
+  }
+  fechaPop(index){
     document.getElementById('popup').style.display = 'none';
   }
   detalhes(index){
-    console.log(index);
+    this.key = index;
     document.getElementById('popup').style.display = 'block';
   }
 }

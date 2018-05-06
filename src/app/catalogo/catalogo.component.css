@@ -20,6 +20,7 @@ section {
 }
 #popup {
     display: none;
+    flex-direction: column;
     position: absolute;
     top: 0;
     left: 0;
