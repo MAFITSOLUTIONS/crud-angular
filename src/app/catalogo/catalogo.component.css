@@ -38,8 +38,10 @@ section {
     width: 100%;
 }
 .fechar {
+    cursor: pointer;
     position: absolute;
     top: 0;
     right: 0;
     margin: 20px;
+    font-size: 40px;
 }
