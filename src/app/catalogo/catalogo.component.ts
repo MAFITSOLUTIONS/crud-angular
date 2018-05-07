@@ -21,7 +21,9 @@ export class CatalogoComponent implements OnInit {
     this.arrayFiltro = this.recebeComputador.filter((obj) => {
       return obj.marca.toLowerCase() === this.busca;
     });
-    this.recebeComputador = this.arrayFiltro;
+    if(this.arrayFiltro.length > 0){
+      this.recebeComputador = this.arrayFiltro;
+    }
   }
   exclui(index){
     this.recebeComputador.splice(index, 1);

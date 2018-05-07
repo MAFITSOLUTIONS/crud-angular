@@ -1,11 +1,12 @@
 <section>
   <h1>Catálogo de Computadores</h1>
   
-  <h2 *ngIf="recebeComputador.length < 1">Não há computadores cadastrados!</h2>
-
-  <input type="text" [(ngModel)]="busca">
-  <span class="deletar" (click)="filtra()"><i class="fas fa-trash-alt"></i> Filtra</span>
-
+  <div class="pesquisa">
+    <input class="campo-busca" (keydown.enter)="filtra()" type="text" [(ngModel)]="busca">
+    <span class="filtrar" (click)="filtra()"><i class="fas fa-search"></i> Filtra</span>
+  </div>
+  <h2>Total: {{recebeComputador.length}} PC(s)</h2>
+  <h2 class="erro" *ngIf="recebeComputador.length < 1">Não há computadores cadastrados!</h2>
   <div class="card-container" *ngIf="recebeComputador.length > 0">
     <ul>
       <li *ngFor="let pc of recebeComputador; let i = index">
