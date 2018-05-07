@@ -9,7 +9,6 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { routing } from './app.router';
 
-
 @NgModule({
   declarations: [
     AppComponent,
