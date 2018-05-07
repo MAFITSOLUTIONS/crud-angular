@@ -8,7 +8,7 @@ O objetivo principal deste teste era criar um sistema que permitisse a administr
   
 - JavaScript
   - TypeScript
-  - Angular 5
+  - Angular 4
   - Angular CLI
 
   ### Clonando o Repositório
