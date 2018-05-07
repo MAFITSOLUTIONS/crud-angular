@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro-produto.component.css']
 })
 export class CadastroProdutoComponent implements OnInit {
-    computadores = [];
+    computadores: any = [];
     flag = false;
 
   constructor() { }
