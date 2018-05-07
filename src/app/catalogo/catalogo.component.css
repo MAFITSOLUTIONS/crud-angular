@@ -1,14 +1,23 @@
+* {
+    color: #fff;
+}
 section {
+    width: 100%;
     text-align: center;
 }
 .card-container ul {
+    border: 3px solid green;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
 }
+.card-container li {
+    margin: 5px 10px;
+}
 .cardPP{
+    width: 100%;
     border: 1px solid red;
     display: flex;
     flex-direction: column;
@@ -16,7 +25,7 @@ section {
     cursor: pointer;
 }
 .cardPP img {
-    width: 150px;
+    width: 200px;
 }
 #popup {
     display: none;

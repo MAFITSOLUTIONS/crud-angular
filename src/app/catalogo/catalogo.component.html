@@ -3,7 +3,7 @@
   
   <h2 *ngIf="recebeComputador.length < 1">Não há computadores cadastrados!</h2>
 
-  {{ busca }}<input type="text" [(ngModel)]="busca">
+  <input type="text" [(ngModel)]="busca">
   <span class="deletar" (click)="filtra()"><i class="fas fa-trash-alt"></i> Filtra</span>
 
   <div class="card-container" *ngIf="recebeComputador.length > 0">
