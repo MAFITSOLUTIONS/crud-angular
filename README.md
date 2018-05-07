@@ -35,3 +35,4 @@ O código irá rodar o plugin **serve**, dessa forma gerando um servidor para o 
 ## Outras Informações
 - Usei, no lugar do BD, o próprio `localStorage` do navegador.
 - Não consegui implementar a tempo a função `EDITAR` no card do produto.
+- O filtro da página `catálogo` é feito pela marca do computador.
