@@ -1,5 +1,5 @@
 ## Visão Geral do Projeto
-O objetivo principal deste teste ra criar um sistema que permitisse a administraçao de computadores em estoque. O sistema deveria permitir cadastrar, listar, filtrar, visualizar, alterar e excluir os computadores em estoque.
+O objetivo principal deste teste era criar um sistema que permitisse a administraçao de computadores em estoque. O sistema deveria permitir cadastrar, listar, filtrar, visualizar, alterar e excluir os computadores em estoque.
 
 ### Tecnologias
 - HTML5
