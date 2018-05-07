@@ -1,27 +1,37 @@
-# TesteIntcom
+## Visão Geral do Projeto
+O objetivo principal deste teste ra criar um sistema que permitisse a administraçao de computadores em estoque. O sistema deveria permitir cadastrar, listar, filtrar, visualizar, alterar e excluir os computadores em estoque.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+### Tecnologias
+- HTML5
 
-## Development server
+- CSS3
+  
+- JavaScript
+  - TypeScript
+  - Angular 5
+  - Angular CLI
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  ### Clonando o Repositório
+Primeiro é preciso que efetue a clonagem do repositório para o seu computador para assim efetuar alterações de código. Mas antes de clonar o repositório é importante que realize um **fork**, ou seja, criar uma cópia do mesmo para o seu github. Para isso basta subir a página e clicar no botão de mesmo nome e aguardar alguns minutos. Depois basta clicar em **clone or download** e copiar a URL do respositório.
 
-## Code scaffolding
+Já abrindo o bash do Git para efetuar a clonagem será necessário que digite a seguinte linha de código e informe a URL copiada anteriormente:
+``` git
+git clone <url-do-repositorio>
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Instalando as Dependências
+Para instalar as dependências do projeto basta abrir o **Prompt de Comando do Node.js** (caso você esteja no linux, basta utilizar o terminal), acessar a pasta do repositório e inserir o seguinte comando:
+``` node
+npm install
+```
 
-## Build
+## Servidor de Desenvolvimento
+Basicamente você deverá escrever seu código e enquanto você efetua alterações no arquivo é necessário deixar o comando abaixo rodando:
+``` node
+ng serve
+```
+O código irá rodar o plugin **serve**, dessa forma gerando um servidor para o desenvolvimento (`http://localhost:4200`) sendo assim toda alteração de código nos arquivos de origem irá recarregar automaticamente a página.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Outras Informações
+- Usei, no lugar do BD, o próprio `localStorage` do navegador.
+- Não consegui implementar a tempo a função `EDITAR` no card do produto.
