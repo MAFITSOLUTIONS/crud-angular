@@ -1,5 +1,6 @@
 <section>
     <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <h4 class="erro" *ngIf="flag === true" >Por favor, preencha todos os campos corretamente</h4>
         <input type="text" placeholder="Marca..." name="marca" [(ngModel)]="computadores.marca">
         <input type="text" placeholder="Modelo..." name="modelo" [(ngModel)]="computadores.modelo">
         <input type="text" placeholder="Placa-mãe..." name="mobo" [(ngModel)]="computadores.mobo">

@@ -26,3 +26,7 @@ button:hover {
     color: #fff;
     background: #f2516b;
 }
+.erro {
+    color: #f00;
+    font-size: 20px;
+}

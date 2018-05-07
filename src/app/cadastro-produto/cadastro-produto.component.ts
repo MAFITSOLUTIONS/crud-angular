@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroProdutoComponent implements OnInit {
     computadores = [];
+    flag = false;
 
   constructor() { }
 
@@ -15,9 +16,22 @@ export class CadastroProdutoComponent implements OnInit {
   }
 
   onSubmit(form){
-    this.computadores.push(form.value);
-    localStorage.setItem('computadores', JSON.stringify(this.computadores));
-    console.log(this.computadores);
-    this.computadores = []; 
+    if(
+      form.value.marca == undefined ||
+      form.value.modelo == undefined ||
+      form.value.mobo == undefined || 
+      form.value.ram == undefined || 
+      form.value.hdTamanho == undefined ||
+      form.value.hdMarca == undefined || 
+      form.value.cpu == undefined || 
+      form.value.veloCpu == undefined || 
+      form.value.foto == undefined
+    ){
+      this.flag = true;
+    }else{
+      this.flag = false;
+      this.computadores.push(form.value);
+      localStorage.setItem('computadores', JSON.stringify(this.computadores));
+    }
   }
 }
