@@ -112,3 +112,14 @@ h2, h1 {
     justify-content: center;
     align-items: center;
 }
+@media screen and (max-width: 500px) {
+    .card-container ul {
+        width: 100%;
+    }
+    .cardGG {
+        width: 80%;
+    }
+    .fechar {
+        margin: 10px;
+    }    
+}
