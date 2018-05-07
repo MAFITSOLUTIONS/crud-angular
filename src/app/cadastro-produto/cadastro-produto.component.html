@@ -1,33 +1,14 @@
 <section>
-
-    <form>
-
-        <input [(ngModel)]="marca" type="text" placeholder="Marca...">
-        <input [(ngModel)]="modelo" type="text" placeholder="Modelo...">
-        <input [(ngModel)]="mobo" type="text" placeholder="Placa-mãe...">
-        <input [(ngModel)]="ram" type="text" placeholder="Memória RAM...">
-        <input [(ngModel)]="hdTamanho" type="text" placeholder="Capacidade HD...">
-        <input [(ngModel)]="hdMarca" type="text" placeholder="Marca HD...">
-        <input [(ngModel)]="cpu" type="text" placeholder="Processador...">
-        <input [(ngModel)]="veloCpu" type="text" placeholder="Velocidade Processador...">
-        <input [(ngModel)]="foto"type="text" placeholder="URL da Imagem">
-        <button type="submit" (click)="cadastra()">Cadastrar</button>
-      
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <input type="text" placeholder="Marca..." name="marca" [(ngModel)]="computadores.marca">
+        <input type="text" placeholder="Modelo..." name="modelo" [(ngModel)]="computadores.modelo">
+        <input type="text" placeholder="Placa-mãe..." name="mobo" [(ngModel)]="computadores.mobo">
+        <input type="number" placeholder="Memória RAM..." name="ram" [(ngModel)]="computadores.ram">
+        <input type="number" placeholder="Capacidade HD..." name="hdTamanho" [(ngModel)]="computadores.hdTamanho">
+        <input type="text" placeholder="Marca HD..." name="hdMarca" [(ngModel)]="computadores.hdMarca">
+        <input type="text" placeholder="Processador..." name="cpu" [(ngModel)]="computadores.cpu">
+        <input type="number" placeholder="Velocidade Processador..." name="veloCpu" [(ngModel)]="computadores.veloCpu">
+        <input type="url" placeholder="URL da Imagem" name="foto" [(ngModel)]="computadores.foto">
+        <button type="submit">Cadastrar</button>
       </form>
-
-  <!-- <form>
-
-    <input [(ngModel)]="marca" type="text" placeholder="Marca...">
-    <input [(ngModel)]="modelo" type="text" placeholder="Modelo...">
-    <input [(ngModel)]="mobo" type="text" placeholder="Placa-mãe...">
-    <input [(ngModel)]="ram" type="text" placeholder="Memória RAM...">
-    <input [(ngModel)]="hdTamanho" type="text" placeholder="Capacidade HD...">
-    <input [(ngModel)]="hdMarca" type="text" placeholder="Marca HD...">
-    <input [(ngModel)]="cpu" type="text" placeholder="Processador...">
-    <input [(ngModel)]="veloCpu" type="text" placeholder="Velocidade Processador...">
-    <input [(ngModel)]="foto"type="text" placeholder="URL da Imagem">
-    <button (click)="cadastra()">Cadastrar</button>
-  
-  </form> -->
-
 </section>
